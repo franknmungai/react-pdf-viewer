@@ -1,8 +1,10 @@
 import React, { useEffect, useState, useRef } from 'react';
 import PropTypes from 'prop-types';
+import './styles/pdf-viewer.css';
+import AppBar from './AppBar';
 
 const PDFView = (props) => {
-	const { src: url, initialZoom } = props;
+	const { src: url, title } = props;
 	const [pdfRef, setPdf] = useState();
 	const [zoom, setZoom] = useState(1);
 	const [currentPage, setCurrentPage] = useState(1);
@@ -70,15 +72,18 @@ const PDFView = (props) => {
 
 		setCurrentPage(pageRequest);
 	};
-	const scale = (val) => setZoom(val);
+	const scale = (val) => setZoom((state) => state * val);
 
 	return (
 		<React.Fragment>
 			<AppBar
 				nextPage={nextPage}
 				prevPage={prevPage}
-				skipTo={skipTo}
+				skipToPage={skipTo}
 				scale={scale}
+				title={title}
+				pageNumber={currentPage}
+				totalPages={pdfRef?._pdfInfo?.numPages}
 			/>
 			<div className="canvas-container">
 				<canvas
@@ -90,14 +95,8 @@ const PDFView = (props) => {
 	);
 };
 
-export const AppBar = () => {
-	return <div>AppBar</div>;
-};
-
 PDFView.prototype = {
 	src: PropTypes.string.isRequired,
 };
-// export const pageControls = PDFView().PageControls;
-// export default PDFView().Document;
 
 export default PDFView;
