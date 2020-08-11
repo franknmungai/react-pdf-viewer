@@ -19,7 +19,7 @@ const AppBar = (props) => {
 				<div className="title">{title ?? 'Document Title'}</div>
 				<div className="page-no">
 					Page{' '}
-					<span contentEditable onKeyDown={skipToPage}>
+					<span contentEditable onKeyPress={skipToPage}>
 						{pageNumber}
 					</span>{' '}
 					of {totalPages || 'loading...'}

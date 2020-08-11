@@ -1,0 +1,84 @@
+body {
+
+	overflow: hidden;
+
+}
+
+.canvas-container {
+
+	/* overflow: auto; */
+
+	width: 100vw;
+
+	height: 100vh;
+
+	background: #fff; /*#333;*/
+
+	/* border: #333 solid 2px; */
+
+	text-align: center;
+
+	overflow-x: hidden;
+
+	margin-top: 0rem;
+
+}
+
+
+
+/* width */
+
+::-webkit-scrollbar {
+
+	width: 10px;
+
+}
+
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+
+	background: #f1f1f1;
+
+}
+
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+
+	background: #888;
+
+}
+
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+
+	background: #555;
+
+}
+
+
+
+@media (max-width: 500px) {
+
+	body {
+
+		overflow: scroll;
+
+	}
+
+	.canvas-container {
+
+		overflow: scroll;
+
+	}
+
+}
+

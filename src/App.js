@@ -1,10 +1,12 @@
 import React from 'react';
-import PDFView from './components/PDFViewer/pdf-viewer';
+// import PDFView from './components/PDFViewer/pdf-viewer';
+import PDFViewer from '@bit/frank_ng.react-pdf.pdf-viewer';
 
 function App() {
 	return (
 		<div className="App">
-			<PDFView src="https://firebasestorage.googleapis.com/v0/b/smartpass-10216.appspot.com/o/Maths-paper-1-model-1.pdf?alt=media" />
+			{/* <PDFView src="https://firebasestorage.googleapis.com/v0/b/smartpass-10216.appspot.com/o/Maths-paper-1-model-1.pdf?alt=media" /> */}
+			<PDFViewer src="https://firebasestorage.googleapis.com/v0/b/smartpass-10216.appspot.com/o/Maths-paper-1-model-1.pdf?alt=media" />
 		</div>
 	);
 }
