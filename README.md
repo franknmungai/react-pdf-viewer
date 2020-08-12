@@ -18,6 +18,34 @@ Bit
 
 ### `bit import frank_ng.react-pdf/pdf-viewer`
 
+### Example usage
+
+```
+import React from 'react';
+import PDFViewer from '@bit/frank_ng.react-pdf.pdf-viewer';
+
+function App() {
+    return (
+        <div className="App">
+            <PDFViewer
+                src="https://firebasestorage.googleapis.com/v0/b/smartpass-10216.appspot.com/o/Maths-paper-1-model-1.pdf?alt=media"
+
+                styles={{}}
+            />
+        </div>
+    );
+}
+
+export default App;
+
+```
+
+### Props
+
+`src` to specify the source URL of the PDF
+
+`styles` to pass custom styles as a JavaScript object
+
 ## Available Scripts
 
 In the project directory, you can run:

@@ -4,7 +4,7 @@ import './styles/pdf-viewer.css';
 import AppBar from './AppBar';
 
 const PDFView = (props) => {
-	const { src: url, title } = props;
+	const { src: url, title, style } = props;
 	const [pdfRef, setPdf] = useState();
 	const [zoom, setZoom] = useState(1);
 	const [currentPage, setCurrentPage] = useState(1);
@@ -75,7 +75,7 @@ const PDFView = (props) => {
 	const scale = (val) => setZoom((state) => state * val);
 
 	return (
-		<React.Fragment>
+		<div style={{ ...style }}>
 			<AppBar
 				nextPage={nextPage}
 				prevPage={prevPage}
@@ -91,12 +91,13 @@ const PDFView = (props) => {
 					onContextMenu={(e) => e.preventDefault()}
 				></canvas>
 			</div>
-		</React.Fragment>
+		</div>
 	);
 };
 
 PDFView.prototype = {
 	src: PropTypes.string.isRequired,
+	styles: PropTypes.object,
 };
 
 export default PDFView;
