@@ -20,9 +20,7 @@ const PDFView = (props) => {
 				.promise.then((pdf) => {
 					setPdf(pdf);
 				})
-				.catch((e) =>
-					alert('Something went wrong, check your internet connection')
-				);
+				.catch((e) => alert('Something went wrong. Could not fetch file'));
 		}
 		setup();
 	}, [url]);

@@ -52,13 +52,14 @@ var AppBar = function AppBar(props) {
     className: "page-no"
   }, "Page", ' ', /*#__PURE__*/_react.default.createElement("span", {
     contentEditable: true,
-    onKeyDown: skipToPage
+    onKeyPress: skipToPage
   }, pageNumber), ' ', "of ", totalPages || 'loading...'), /*#__PURE__*/_react.default.createElement("div", {
     className: "controls"
   }, controls.map(function (item) {
     return /*#__PURE__*/_react.default.createElement("div", {
       className: "tooltip m-1",
-      onClick: item.onClick
+      onClick: item.onClick,
+      key: item.name
     }, /*#__PURE__*/_react.default.createElement("img", {
       src: 'https://img.icons8.com/' + item.src,
       alt: item.name

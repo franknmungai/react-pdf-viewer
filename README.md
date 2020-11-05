@@ -28,7 +28,7 @@ function App() {
     return (
         <div className="App">
             <PDFViewer
-                src="https://firebasestorage.googleapis.com/v0/b/smartpass-10216.appspot.com/o/Maths-paper-1-model-1.pdf?alt=media"
+                src="https://firebasestorage.googleapis.com/v0/b/socialnet-650b7.appspot.com/o/2.2.2.3 Lab - Diagnostic Software.pdf?alt=media"
 
                 styles={{}}
             />

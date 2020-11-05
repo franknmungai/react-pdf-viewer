@@ -26,7 +26,7 @@ const AppBar = (props) => {
 				</div>
 				<div className="controls">
 					{controls.map((item) => (
-						<div className="tooltip m-1" onClick={item.onClick}>
+						<div className="tooltip m-1" onClick={item.onClick} key={item.name}>
 							<img src={'https://img.icons8.com/' + item.src} alt={item.name} />
 							<div className="tooltiptext">{item.name}</div>
 						</div>
